@@ -33,14 +33,30 @@ This repository contains various OpenCV C++ examples demonstrating different com
 - **Description**: Real-time face detection using OpenCV's Haar cascade classifier.
 - **Controls**: Same as webcam_test
 
-### 4. YOLOv5 Object Detection (`test`)
+### 4. Pose Detection Webcam (`pose_detection_webcam`)
+- **File**: `pose_detection_webcam.cpp`
+- **Compile**: `make pose_detection_webcam`
+- **Run**: `./pose_detection_webcam`
+- **Description**: Real-time pose estimation using HOG person detection with estimated keypoints.
+- **Features**: 17 COCO-format keypoints, pose connections, confidence scores
+- **Controls**: Same as webcam_test
+
+### 5. Advanced Pose Detection (`advanced_pose_webcam`)
+- **File**: `advanced_pose_webcam.cpp`
+- **Compile**: `make advanced_pose_webcam`
+- **Run**: `./advanced_pose_webcam`
+- **Description**: Advanced pose estimation with 33 MediaPipe-format keypoints and DNN model support.
+- **Features**: Attempts to download real pose models, falls back to HOG detection
+- **Controls**: Same as webcam_test
+
+### 6. YOLOv5 Object Detection (`test`)
 - **File**: `test.cpp`
 - **Compile**: `make test`
 - **Run**: `./test`
 - **Description**: YOLOv5 object detection on static images (requires compatible ONNX model).
 - **Note**: May have compatibility issues with OpenCV 4.5.4 due to FLOAT16 data type.
 
-### 5. MobileNet-SSD Object Detection (`simple_test`)
+### 7. MobileNet-SSD Object Detection (`simple_test`)
 - **File**: `simple_test.cpp`
 - **Compile**: `make simple_test`
 - **Run**: `./simple_test`
@@ -59,6 +75,8 @@ make all
 make basic_test          # Basic image processing
 make webcam_test         # Webcam processing
 make face_detection_webcam # Face detection
+make pose_detection_webcam # Pose detection
+make advanced_pose_webcam # Advanced pose detection
 make test               # YOLOv5 detection
 make simple_test        # MobileNet-SSD detection
 ```
@@ -101,6 +119,7 @@ The webcam programs are configured to use device 1 by default. If device 1 is no
 1. **Image Processing**: Grayscale conversion, blurring, edge detection
 2. **Video Capture**: Real-time webcam processing
 3. **Object Detection**: Face detection using Haar cascades
-4. **Deep Learning**: DNN module usage with pre-trained models
+4. **Pose Estimation**: Real-time pose detection with keypoint tracking
+5. **Deep Learning**: DNN module usage with pre-trained models
 5. **User Interface**: Real-time display with keyboard controls
 6. **Error Handling**: Robust error checking and fallback mechanisms 
