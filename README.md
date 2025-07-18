@@ -49,14 +49,41 @@ This repository contains various OpenCV C++ examples demonstrating different com
 - **Features**: Attempts to download real pose models, falls back to HOG detection
 - **Controls**: Same as webcam_test
 
-### 6. YOLOv5 Object Detection (`test`)
+### 6. Dynamic Pose Detection (`dynamic_pose_webcam`)
+- **File**: `dynamic_pose_webcam.cpp`
+- **Compile**: `make dynamic_pose_webcam`
+- **Run**: `./dynamic_pose_webcam`
+- **Description**: **REAL DYNAMIC** pose estimation using motion tracking and background subtraction.
+- **Features**: 
+  - Motion-based keypoint positioning
+  - Motion trails and velocity vectors
+  - Background subtraction for motion detection
+  - Optical flow tracking
+  - Dynamic keypoint history
+- **Controls**: Same as webcam_test
+
+### 7. Real OpenPose Detection (`real_pose_webcam`) ⭐
+- **File**: `real_pose_webcam.cpp`
+- **Compile**: `make real_pose_webcam`
+- **Run**: `./real_pose_webcam`
+- **Description**: **REAL POSE ESTIMATION** using official OpenPose COCO model with OpenCV DNN.
+- **Features**: 
+  - 18 COCO keypoints (nose, neck, shoulders, elbows, wrists, hips, knees, ankles, eyes, ears)
+  - Real-time pose detection from webcam
+  - Accurate keypoint positioning
+  - Proper skeleton connections
+  - Uses official OpenPose model (200MB)
+- **Requirements**: `pose_coco.caffemodel` and `pose_coco.prototxt`
+- **Controls**: Same as webcam_test
+
+### 8. YOLOv5 Object Detection (`test`)
 - **File**: `test.cpp`
 - **Compile**: `make test`
 - **Run**: `./test`
 - **Description**: YOLOv5 object detection on static images (requires compatible ONNX model).
 - **Note**: May have compatibility issues with OpenCV 4.5.4 due to FLOAT16 data type.
 
-### 7. MobileNet-SSD Object Detection (`simple_test`)
+### 9. MobileNet-SSD Object Detection (`simple_test`)
 - **File**: `simple_test.cpp`
 - **Compile**: `make simple_test`
 - **Run**: `./simple_test`

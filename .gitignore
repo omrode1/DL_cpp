@@ -1,1 +1,117 @@
-.onnx
+# Compiled binaries and executables
+*.exe
+*.out
+*.app
+webcam_test
+simple_test
+test
+face_detection_webcam
+pose_detection_webcam
+advanced_pose_webcam
+dynamic_pose_webcam
+real_pose_webcam
+
+# Object files
+*.o
+*.obj
+
+# Library files
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Model files (large binary files)
+*.onnx
+*.caffemodel
+*.prototxt
+*.weights
+*.pth
+*.pkl
+*.h5
+*.pb
+*.tflite
+*.mlmodel
+
+# Allow specific model files that should be tracked
+!pose_coco.caffemodel
+!pose_coco.prototxt
+
+# Test images and videos
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build directories
+build/
+bin/
+obj/
+Debug/
+Release/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+*.log
+
+# Backup files
+*.bak
+*.backup
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Package files
+*.tar.gz
+*.zip
+*.rar
+
+# Documentation build
+docs/_build/
+
+# Python cache (if any Python scripts)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
